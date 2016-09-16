@@ -2,6 +2,8 @@
 Related to my IDxyz library/code - a shortener for code targeting an element id to add css, color, etc.. - Like jQuery, only just element id's so far.  Method chaining
 
 
+
+
 Some test code - compare length of code - The id's and color's name's characters are same length to compare.
 
 $('#two').css({'color':'olive','background-color':'plum','border':'solid salmon 4px','width':'95px'});
