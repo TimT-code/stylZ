@@ -1,5 +1,5 @@
-var stylZ=(function(){
-    var stylZ=function(el){/* 'Z_' is an alias for 'styleZ' */
+var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
+    var stylZ=function(el){
       var
         ele=document.getElementById(el),
         elz=ele.style,
