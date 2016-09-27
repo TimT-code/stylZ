@@ -26,6 +26,7 @@ Z_('six6').z_bgix('website/picture.gif').z_c('black').z_b('solid red 4px').z_w('
 Z_('sevn').z_bgiy('website/picture.gif').z_c('black').z_b('solid green 4px').z_w('80px').z_h('240px');
 
 ####chain horizontally, or vertically
+
 Z_('eight')
 .z_c('blue')
 .z_b('solid green 6px')
