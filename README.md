@@ -28,8 +28,8 @@ Z_('sevn').z_bgiy('website/picture.gif').z_c('black').z_b('solid green 4px').z_w
 ####chain horizontally, or vertically
 
 Z_('eight')<br>
-.z_c('blue')
-.z_b('solid green 6px')
-.z_w('180px')
+.z_c('blue')<br>
+.z_b('solid green 6px')<br>
+.z_w('180px')<br>
 .z_h('340px');
 
