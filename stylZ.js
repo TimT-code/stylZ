@@ -84,8 +84,6 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_zi=function(val){elz.zIndex=val;return this;}/*auto|number|initial|inherit - number can be positive, or negative*/
 
       return {/*To-do list--Return one function ONLY... that is equivalent to this whole object being returned*/
-        el:el,
-        elz:elz,
         zss:zss,
         /*text color*/
         z_c:z_c,
