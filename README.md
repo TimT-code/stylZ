@@ -27,12 +27,10 @@ Z_('sevn').z_bgiy('website/picture.gif').z_c('black').z_b('solid green 4px').z_w
 
 ####chain horizontally, or vertically
 
+'''javascript
 Z_('eight')
-
 .z_c('blue')
-
 .z_b('solid green 6px')
-
 .z_w('180px')
-
 .z_h('340px');
+'''
