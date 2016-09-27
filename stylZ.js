@@ -21,6 +21,26 @@ var stylZ=(function(){
 
         z_bgi=function(val){
           elz.backgroundImage='url("'+val+'")';
+          /*default x-y repeat*/
+          return this;
+        },
+          
+        z_bgix=function(val){
+          elz.backgroundImage='url("'+val+'")';
+          elz.backgroundRepeat='repeat-x';
+          return this;
+        },
+          
+        z_bgiy=function(val){
+          elz.backgroundImage='url("'+val+'")';
+          elz.backgroundRepeat='repeat-y';
+          return this;
+        },
+          
+        z_bgin=function(val){
+          //to-do:Add check for missing argument to use as automatic no-repeat without providing a url again - toggle no-repeat
+          elz.backgroundImage='url("'+val+'")';
+          elz.backgroundRepeat='no-repeat';
           return this;
         },
 
@@ -46,6 +66,9 @@ var stylZ=(function(){
         z_c:z_c,
         z_bgc:z_bgc,
         z_bgi:z_bgi,
+        z_bgix:z_bgix,
+        z_bgiy:z_bgiy,
+        z_bgin:z_bgin,
         z_b:z_b,
         z_w:z_w,
         z_h:z_h
@@ -53,15 +76,3 @@ var stylZ=(function(){
     };
 return window.stylZ=window.Z_=stylZ/*stylZ=Z_*/
 }());
-
-//test code - compare length of code - The id's and color's name's characters are same length to compare
-jQuery('#one').css({'color':'brown','background-color':'gray','border':'solid indigo 4px','width':'99px'});
-$('#two').css({'color':'olive','background-color':'plum','border':'solid salmon 4px','width':'95px'});
-stylZ('thre').z_c('white').z_bgc('teal').zss('border','solid purple 4px').zss('width','77px');
-Z_('four').z_c('wheat').z_bgc('peru').z_b('solid orange 4px').z_w('57px');
-Z_('five').z_bgi('https://codepen.io/assets/avatars/user-avatar-80x80-fd2a2ade7f141e06f8fd94c000d6ac7a.png').z_c('black').z_b('solid black 4px').z_w('auto').z_h('auto');
-
-//Practice for method chaining
-//Work in progress - will add more style stuff from my other pen/library
-//http://codepen.io/TimT_code/pen/mEavPA
-//https://github.com/TimT-code/stylZ
