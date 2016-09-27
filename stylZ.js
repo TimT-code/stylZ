@@ -1,5 +1,5 @@
 var stylZ=(function(){
-    var stylZ=function(el){/* Z_ is an alias for "styleZ" */
+    var stylZ=function(el){/* 'Z_' is an alias for 'styleZ' */
       var/*comma chain*/
         el=document.getElementById(el),
         elz=el.style,
