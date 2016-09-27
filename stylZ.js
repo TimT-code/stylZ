@@ -5,6 +5,13 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         elz=ele.style,
 
         zss=function(prop,val){/*zss=css*/elz[prop]=val;return this;},
+          
+        z_dno=function(){elz.display='none';return this;},
+        z_din=function(){elz.display='inline';return this;},
+        z_dib=function(){elz.display='inline-block';return this;},
+        z_dbl=function(){elz.display='block';return this;},
+          
+        z_btm=function(val){elz.bottom=val;return this;},
 
         z_c=function(val){elz.color=val;return this;},
           
@@ -29,6 +36,10 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
           elz.backgroundRepeat='no-repeat';
           return this;
         },
+          
+        z_bgino=function(val){elz.backgroundImage='none';return this;},
+        z_bgini=function(val){elz.backgroundImage='initial';return this;},
+        z_bginh=function(val){elz.backgroundImage='inherit';return this;},
 
         z_b=function(val){elz.border=val;return this;},          
         z_bt=function(val){elz.borderTop=val;return this;},          
@@ -83,6 +94,14 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
 
       return {/*To-do list--Return one function ONLY... that is equivalent to this whole object being returned*/
         zss:zss,
+        
+        z_dno:z_dno,
+        z_din:z_din,
+        z_dib:z_dib,
+        z_dbl:z_dbl,
+        
+        z_btm:z_btm,
+        
         /*text color*/
         z_c:z_c,
         
@@ -93,6 +112,9 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bgix:z_bgix,
         z_bgiy:z_bgiy,
         z_bgin:z_bgin,
+        z_bgino:z_bgino,
+        z_bgini:z_bgini,
+        z_bginh:z_bginh,
         
         /*border*/
         z_b:z_b,
