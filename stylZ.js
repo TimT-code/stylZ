@@ -9,9 +9,7 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_c=function(val){elz.color=val;return this;},
           
         z_bg=function(val){elz.background=val;return this;},
-
         z_bgc=function(val){elz.backgroundColor=val;return this;},
-
         z_bgi=function(val){if(arguments[0])elz.backgroundImage='url("'+val+'")';/*default x-y repeat*/return this;},
           
         z_bgix=function(val){
