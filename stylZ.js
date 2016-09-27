@@ -13,6 +13,11 @@ var stylZ=(function(){
           elz.color=val;
           return this;
         },
+          
+        z_bg=function(val){
+          elz.background=val;
+          return this;
+        },
 
         z_bgc=function(val){
           elz.backgroundColor=val;
@@ -63,13 +68,18 @@ var stylZ=(function(){
         el:el,
         elz:elz,
         zss:zss,
+        /*text color*/
         z_c:z_c,
+        /*background*/
+        z_bg:z_bg,
         z_bgc:z_bgc,
         z_bgi:z_bgi,
         z_bgix:z_bgix,
         z_bgiy:z_bgiy,
         z_bgin:z_bgin,
+        /*border*/
         z_b:z_b,
+        /*width & height*/
         z_w:z_w,
         z_h:z_h
       };
