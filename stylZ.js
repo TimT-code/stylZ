@@ -13,8 +13,8 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
           
         z_btm=function(val){elz.bottom=val;return this;},
 
-        z_c=function(val){elz.color=val;return this;},
-          
+        z_c=function(val){elz.color=val;return this;},        
+        
         z_bg=function(val){elz.background=val;return this;},
         z_bgc=function(val){elz.backgroundColor=val;return this;},
         z_bgi=function(val){if(arguments[0])elz.backgroundImage='url("'+val+'")';/*default x-y repeat*/return this;},
@@ -40,7 +40,18 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bgino=function(val){elz.backgroundImage='none';return this;},
         z_bgini=function(val){elz.backgroundImage='initial';return this;},
         z_bginh=function(val){elz.backgroundImage='inherit';return this;},
-
+          
+        z_bm=function(val){elz.backgroundBlendMode=val;return this;},/*(CSS3 - noIE) - normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity*/
+        z_bmn=function(){elz.backgroundBlendMode='normal';return this;}
+        z_bmm=function(){elz.backgroundBlendMode='multiply';return this;}
+        z_bmscr=function(){elz.backgroundBlendMode='screen';return this;}
+        z_bmo=function(){elz.backgroundBlendMode='overlay';return this;}
+        z_bmd=function(){elz.backgroundBlendMode='darken';return this;}
+        z_bml=function(){elz.backgroundBlendMode='lighten';return this;}
+        z_bmcd=function(){elz.backgroundBlendMode='color-dodge';return this;}
+        z_bmsat=function(){elz.backgroundBlendMode='saturation';return this;}
+        z_bmlum=function(){elz.backgroundBlendMode='luminosity';return this;}
+      
         z_b=function(val){elz.border=val;return this;},          
         z_bt=function(val){elz.borderTop=val;return this;},          
         z_br=function(val){elz.borderRight=val;return this;},          
@@ -106,7 +117,7 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_c:z_c,
         
         /*background*/
-        z_bg:z_bg,
+        z_bg:z_bg,        
         z_bgc:z_bgc,
         z_bgi:z_bgi,
         z_bgix:z_bgix,
@@ -115,6 +126,16 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bgino:z_bgino,
         z_bgini:z_bgini,
         z_bginh:z_bginh,
+        z_bm:z_bm,
+        z_bmn:z_bmn,
+        z_bmm:z_bmm,
+        z_bmscr:z_bmscr,
+        z_bmo:z_bmo,
+        z_bmd:z_bmd,
+        z_bml:z_bml,
+        z_bmcd:z_bmcd,
+        z_bmsat:z_bmsat,
+        z_bmlum:z_bmlum,
         
         /*border*/
         z_b:z_b,
