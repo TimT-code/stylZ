@@ -18,7 +18,7 @@ Z_('four').z_c('wheat').z_bgc('peru').z_b('solid orange 4px').z_w('57px');
 Z_('five').z_bgi('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
 
 ###no repeat background image
-Z_('five').z_bgin('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
+Z_('five').z_bgino('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
 
 ###repeat-x background image
 Z_('six6').z_bgix('website/picture.gif').z_c('black').z_b('solid red 4px').z_w('240px').z_h('75px');
