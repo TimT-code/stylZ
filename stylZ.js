@@ -42,15 +42,22 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bginh=function(val){elz.backgroundImage='inherit';return this;},
           
         z_bm=function(val){elz.backgroundBlendMode=val;return this;},/*(CSS3 - noIE) - normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity*/
-        z_bmn=function(){elz.backgroundBlendMode='normal';return this;}
-        z_bmm=function(){elz.backgroundBlendMode='multiply';return this;}
-        z_bmscr=function(){elz.backgroundBlendMode='screen';return this;}
-        z_bmo=function(){elz.backgroundBlendMode='overlay';return this;}
-        z_bmd=function(){elz.backgroundBlendMode='darken';return this;}
-        z_bml=function(){elz.backgroundBlendMode='lighten';return this;}
-        z_bmcd=function(){elz.backgroundBlendMode='color-dodge';return this;}
-        z_bmsat=function(){elz.backgroundBlendMode='saturation';return this;}
-        z_bmlum=function(){elz.backgroundBlendMode='luminosity';return this;}
+        z_bmn=function(){elz.backgroundBlendMode='normal';return this;},
+        z_bmm=function(){elz.backgroundBlendMode='multiply';return this;},
+        z_bmscr=function(){elz.backgroundBlendMode='screen';return this;},
+        z_bmo=function(){elz.backgroundBlendMode='overlay';return this;},
+        z_bmd=function(){elz.backgroundBlendMode='darken';return this;},
+        z_bml=function(){elz.backgroundBlendMode='lighten';return this;},
+        z_bmcd=function(){elz.backgroundBlendMode='color-dodge';return this;},
+        z_bmsat=function(){elz.backgroundBlendMode='saturation';return this;},
+        z_bmlum=function(){elz.backgroundBlendMode='luminosity';return this;},
+        
+        z_bgclp=function(val){elz.background-clip=val;return this;},/*(CSS3 - noIE) - border-box|padding-box|content-box|initial|inherit*/
+        z_bgclpb=function(){elz.background-clip='border-box';return this;},
+        z_bgclpp=function(){elz.background-clip='padding-box';return this;},
+        z_bgclpc=function(val){elz.background-clip='content-box';return this;},
+        z_bgclpi=function(val){elz.background-clip='initial';return this;},
+        z_bgclpih=function(val){elz.background-clip='inherit';return this;},
       
         z_b=function(val){elz.border=val;return this;},          
         z_bt=function(val){elz.borderTop=val;return this;},          
@@ -136,6 +143,13 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bmcd:z_bmcd,
         z_bmsat:z_bmsat,
         z_bmlum:z_bmlum,
+        
+        z_bgclp:z_bgclp,
+        z_bgclpb:z_bgclpb,
+        z_bgclpp:z_bgclpp,
+        z_bgclpc:z_bgclpc,
+        z_bgclpi:z_bgclpi,
+        z_bgclpih:z_bgclpih,
         
         /*border*/
         z_b:z_b,
