@@ -52,12 +52,19 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bmsat=function(){elz.backgroundBlendMode='saturation';return this;},
         z_bmlum=function(){elz.backgroundBlendMode='luminosity';return this;},
         
-        z_bgclp=function(val){elz.background-clip=val;return this;},/*(CSS3 - IE9+) - border-box|padding-box|content-box|initial|inherit*/
-        z_bgclpb=function(){elz.background-clip='border-box';return this;},
-        z_bgclpp=function(){elz.background-clip='padding-box';return this;},
-        z_bgclpc=function(val){elz.background-clip='content-box';return this;},
-        z_bgclpi=function(val){elz.background-clip='initial';return this;},
-        z_bgclpih=function(val){elz.background-clip='inherit';return this;},
+        z_clp=function(val){elz.background-clip=val;return this;},/*(CSS3 - IE9+) - border-box|padding-box|content-box|initial|inherit*/
+        z_clpb=function(){elz.background-clip='border-box';return this;},
+        z_clpp=function(){elz.background-clip='padding-box';return this;},
+        z_clpc=function(val){elz.background-clip='content-box';return this;},
+        z_clpi=function(val){elz.background-clip='initial';return this;},
+        z_clpih=function(val){elz.background-clip='inherit';return this;},
+          
+        z_ori=function(val){elz.background-origin=val;return this;},/*(CSS3 - IE9+) - padding-box|border-box|content-box|initial|inherit*/
+        z_orip=function(){elz.background-origin='padding-box';return this;},
+        z_orib=function(){elz.background-origin='border-box';return this;},
+        z_oric=function(){elz.background-origin='content-box';return this;},
+        z_orin=function(){elz.background-origin='initial';return this;},
+        z_orih=function(){elz.background-origin='inherit';return this;},
       
         z_b=function(val){elz.border=val;return this;},          
         z_bt=function(val){elz.borderTop=val;return this;},          
@@ -133,7 +140,6 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bgino:z_bgino,
         z_bgini:z_bgini,
         z_bginh:z_bginh,
-          
         z_bm:z_bm,
         z_bmn:z_bmn,
         z_bmm:z_bmm,
@@ -145,12 +151,19 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bmsat:z_bmsat,
         z_bmlum:z_bmlum,
         
-        z_bgclp:z_bgclp,
-        z_bgclpb:z_bgclpb,
-        z_bgclpp:z_bgclpp,
-        z_bgclpc:z_bgclpc,
-        z_bgclpi:z_bgclpi,
-        z_bgclpih:z_bgclpih,
+        z_clp:z_clp,
+        z_clpb:z_clpb,
+        z_clpp:z_clpp,
+        z_clpc:z_clpc,
+        z_clpi:z_clpi,
+        z_clpih:z_clpih,
+        
+        z_ori:z_ori,
+        z_orip:z_orip,
+        z_orib:z_orib,
+        z_oric:z_oric,
+        z_orin:z_orin,
+        z_orih:z_orih,
         
         /*border*/
         z_b:z_b,
