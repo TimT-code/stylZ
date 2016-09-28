@@ -133,6 +133,7 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bgino:z_bgino,
         z_bgini:z_bgini,
         z_bginh:z_bginh,
+          
         z_bm:z_bm,
         z_bmn:z_bmn,
         z_bmm:z_bmm,
