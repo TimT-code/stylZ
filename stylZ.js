@@ -52,7 +52,7 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bmsat=function(){elz.backgroundBlendMode='saturation';return this;},
         z_bmlum=function(){elz.backgroundBlendMode='luminosity';return this;},
         
-        z_bgclp=function(val){elz.background-clip=val;return this;},/*(CSS3 - noIE) - border-box|padding-box|content-box|initial|inherit*/
+        z_bgclp=function(val){elz.background-clip=val;return this;},/*(CSS3 - IE9+) - border-box|padding-box|content-box|initial|inherit*/
         z_bgclpb=function(){elz.background-clip='border-box';return this;},
         z_bgclpp=function(){elz.background-clip='padding-box';return this;},
         z_bgclpc=function(val){elz.background-clip='content-box';return this;},
