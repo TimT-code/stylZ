@@ -6,7 +6,7 @@ Related to my IDxyz library/code - a shortener for code targeting an element id 
 
 Some test code - compare length of code - The id's and color's name's characters are same length to compare.
 
-Use 'stylZ' or 'Z_' (similar to 'jQuery' or '$')
+Use 'stylZ' or 'Z_' (similar to typing 'jQuery' or '$')
 
 jQuery('#one').css({'color':'brown','background-color':'gray','border':'solid indigo 4px','width':'99px'});
 $('#two').css({'color':'olive','background-color':'plum','border':'solid salmon 4px','width':'95px'});
