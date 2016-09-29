@@ -111,11 +111,11 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
           
         z_wsp=function(val){elz.wordSpacing=val;return this;},/*normal|length|initial|inherit - number can be positive, or negative*/
           
-        z_w=function(val){elz.width=val;return this;};/*auto|length|%|initial|inherit*/
+        z_w=function(val){elz.width=val;return this;},/*auto|length|%|initial|inherit*/
       
-        z_h=function(val){elz.height=val;return this;};/*auto|length|%|initial|inherit*/
+        z_h=function(val){elz.height=val;return this;},/*auto|length|%|initial|inherit*/
       
-        z_zi=function(val){elz.zIndex=val;return this;}/*auto|number|initial|inherit - number can be positive, or negative*/
+        z_zi=function(val){elz.zIndex=val;return this;};/*auto|number|initial|inherit - number can be positive, or negative*/
 
       return {/*To-do list--Return one function ONLY... that is equivalent to this whole object being returned*/
         zss:zss,
