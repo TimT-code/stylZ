@@ -8,11 +8,22 @@ Some test code - compare length of code - The id's and color's name's characters
 
 Use 'stylZ' or 'Z_' (similar to typing 'jQuery' or '$')
 
+//test code - compare length of code - The id's and color's name's characters are same length to compare
+
+var test_img='https://codepen.io/assets/avatars/user-avatar-80x80-fd2a2ade7f141e06f8fd94c000d6ac7a.png';
+
 jQuery('#one').css({'color':'brown','background-color':'gray','border':'solid indigo 4px','width':'99px'});
 $('#two').css({'color':'olive','background-color':'plum','border':'solid salmon 4px','width':'95px'});
+stylZ('#thre').z_c('white').z_bgc('teal').zss('border','solid purple 4px').zss('width','77px');
+Z_('#four').z_c('wheat').z_bgc('peru').z_b('solid orange 4px').z_w('57px');
 
-stylZ('thre').z_c('white').z_bgc('teal').zss('border','solid purple 4px').zss('width','77px');
-Z_('four').z_c('wheat').z_bgc('peru').z_b('solid orange 4px').z_w('57px');
+Z_('.all').z_bgin(test_img).z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
+
+Z_('#six6').z_bgc('gray');
+Z_('.sev').zss('color','orange');
+Z_('p','0').z_c('red');
+Z_('p',[1]).z_c('green');
+Z_('p').z_c('purple');
 
 ###default repeat background image
 Z_('five').z_bgi('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
