@@ -1,10 +1,27 @@
-var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
-    var stylZ=function(el){
-      var
-        ele=document.getElementById(el),
-        elz=ele.style,
+var stylZ=(function(){// 'Z_' is an alias for 'styleZ' 
+    var stylZ=function(el,index){
+      var ele;
+      if(!arguments[1]){//no index passed or asterisk
+        if(el.charAt(0)==='#'){console.log('id');//id
+          ele=document.getElementById(el.substring(1));// remove '#' 
+        }else if(el.charAt(0)==='.'){console.log('class');//class
+          ele=document.querySelector(el);//1st Class occurence - don't use substring to remove '.' since querySelector needs it
+        }else if(el.charAt(0)!=='#' && el.charAt(0)!=='.'){console.log('tagname only');
+          ele=document.getElementsByTagName(el);
+        }
+      }
+      else{if(arguments[1] && arguments[1]!=='*'){console.log('tagname and index');//tagname and index
+          ele=document.getElementsByTagName(el)[index];//index
+        }else if(arguments[0] && arguments[1]!=='*'){console.log('id, class, or tagname');
+          ele=document.querySelectorAll(el)[index];
+        }else if(!arguments[0] && arguments[1]==='*'){console.log('ALL elements on page');
+          ele=document.querySelectorAll('*');//make loop
+        }
+          }
+      
+        var elz=ele.style;
 
-        zss=function(prop,val){/*zss=css*/elz[prop]=val;return this;},
+        var zss=function(prop,val){/*zss=css*/elz[prop]=val;return this;},
           
         z_dno=function(){elz.display='none';return this;},
         z_din=function(){elz.display='inline';return this;},
@@ -12,6 +29,13 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_dbl=function(){elz.display='block';return this;},
           
         z_btm=function(val){elz.bottom=val;return this;},
+          
+        z_f=function(val){elz.font=val;return this;},
+        z_ff=function(val){elz.fontFamily=val;return this;},
+        z_fvn=function(){elz.fontVariant='normal';return this;},
+        z_fvs=function(){elz.fontVariant='small-caps';return this;},
+        z_fvin=function(){elz.fontVariant='initial';return this;},
+        z_fvih=function(){elz.fontVariant='inherit';return this;},
 
         z_c=function(val){elz.color=val;return this;},        
         
@@ -52,19 +76,19 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_bmsat=function(){elz.backgroundBlendMode='saturation';return this;},
         z_bmlum=function(){elz.backgroundBlendMode='luminosity';return this;},
         
-        z_clp=function(val){elz.background-clip=val;return this;},/*(CSS3 - IE9+) - border-box|padding-box|content-box|initial|inherit*/
-        z_clpb=function(){elz.background-clip='border-box';return this;},
-        z_clpp=function(){elz.background-clip='padding-box';return this;},
-        z_clpc=function(val){elz.background-clip='content-box';return this;},
-        z_clpi=function(val){elz.background-clip='initial';return this;},
-        z_clpih=function(val){elz.background-clip='inherit';return this;},
+        z_clp=function(val){elz.backgroundClip=val;return this;},/*(CSS3 - IE9+) - border-box|padding-box|content-box|initial|inherit*/
+        z_clpb=function(){elz.backgroundClip='border-box';return this;},
+        z_clpp=function(){elz.backgroundClip='padding-box';return this;},
+        z_clpc=function(val){elz.backgroundClip='content-box';return this;},
+        z_clpi=function(val){elz.backgroundClip='initial';return this;},
+        z_clpih=function(val){elz.backgroundClip='inherit';return this;},
           
-        z_ori=function(val){elz.background-origin=val;return this;},/*(CSS3 - IE9+) - padding-box|border-box|content-box|initial|inherit*/
-        z_orip=function(){elz.background-origin='padding-box';return this;},
-        z_orib=function(){elz.background-origin='border-box';return this;},
-        z_oric=function(){elz.background-origin='content-box';return this;},
-        z_orin=function(){elz.background-origin='initial';return this;},
-        z_orih=function(){elz.background-origin='inherit';return this;},
+        z_ori=function(val){elz.backgroundOrigin=val;return this;},/*(CSS3 - IE9+) - padding-box|border-box|content-box|initial|inherit*/
+        z_orip=function(){elz.backgroundOrigin='padding-box';return this;},
+        z_orib=function(){elz.backgroundOrigin='border-box';return this;},
+        z_oric=function(){elz.backgroundOrigin='content-box';return this;},
+        z_orin=function(){elz.backgroundOrigin='initial';return this;},
+        z_orih=function(){elz.backgroundOrigin='inherit';return this;},
       
         z_b=function(val){elz.border=val;return this;},          
         z_bt=function(val){elz.borderTop=val;return this;},          
@@ -116,6 +140,7 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_h=function(val){elz.height=val;return this;},/*auto|length|%|initial|inherit*/
       
         z_zi=function(val){elz.zIndex=val;return this;};/*auto|number|initial|inherit - number can be positive, or negative*/
+          
 
       return {/*To-do list--Return one function ONLY... that is equivalent to this whole object being returned*/
         zss:zss,
@@ -126,6 +151,14 @@ var stylZ=(function(){/* 'Z_' is an alias for 'styleZ' */
         z_dbl:z_dbl,
         
         z_btm:z_btm,
+        
+        z_f:z_f,
+        z_ff:z_ff,
+        z_fvn:z_fvn,
+        z_fvs:z_fvs,
+        z_fvin:z_fvin,
+        z_fvih:z_fvih,
+        
         
         /*text color*/
         z_c:z_c,
