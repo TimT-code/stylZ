@@ -6,13 +6,13 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
           ele=document.getElementById(el.substring(1));// remove '#' 
         }else if(el.charAt(0)==='.'){console.log('class');//class
           ele=document.querySelector(el);//1st Class occurence - don't use substring to remove '.' since querySelector needs it
-        }else if(el.charAt(0)!=='#' && el.charAt(0)!=='.'){console.log('tagname only');
-          ele=document.getElementsByTagName(el);
+        }else if(arguments[0] && el.charAt(0)!=='#' && el.charAt(0)!=='.'){console.log('tagname only-first occurence');
+          ele=document.getElementsByTagName(el)[0];
         }
       }
-      else{if(arguments[1] && arguments[1]!=='*'){console.log('tagname and index');//tagname and index
+      else{if(arguments[0] && arguments[1] && arguments[1]!=='*' && el.charAt(0)!=='#' && el.charAt(0)!=='.'){console.log('tagname and index');//tagname and index
           ele=document.getElementsByTagName(el)[index];//index
-        }else if(arguments[0] && arguments[1]!=='*'){console.log('id, class, or tagname');
+        }else if(arguments[0] && arguments[1] && arguments[1]!=='*'){console.log('id, class, or tagname');
           ele=document.querySelectorAll(el)[index];
         }else if(!arguments[0] && arguments[1]==='*'){console.log('ALL elements on page');
           ele=document.querySelectorAll('*');//make loop
@@ -248,5 +248,6 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
         z_zi:z_zi
       };
     };
-return window.stylZ=window.Z_=stylZ;/*stylZ=Z_*/
+var ZZ=window.stylZ=window.Z_=stylZ;/*stylZ=Z_*/
+return ZZ;
 }());
