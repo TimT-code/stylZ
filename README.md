@@ -1,14 +1,13 @@
 # stylZ
-Related to my IDxyz library/code - a shortener for code targeting an element id to add css, color, etc.. - Like jQuery, only just element id's so far.  Method chaining
+Related to my IDxyz library/code - a shortener for code targeting an element id to add css, color, etc..
 
+Still working on this fun project - (Bugs:more than one tag doesn't work, and querySelector('*') doesn't work yet either)
 
-
+Like jQuery - Method chaining - Unique abbreviations
 
 Some test code - compare length of code - The id's and color's name's characters are same length to compare.
 
 Use 'stylZ' or 'Z_' (similar to typing 'jQuery' or '$')
-
-//test code - compare length of code - The id's and color's name's characters are same length to compare
 
 var test_img='https://codepen.io/assets/avatars/user-avatar-80x80-fd2a2ade7f141e06f8fd94c000d6ac7a.png';
 
