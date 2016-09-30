@@ -22,19 +22,19 @@ Z_('#six6').z_bgc('gray');
 Z_('.sev').zss('color','orange');
 Z_('p','0').z_c('red');
 Z_('p',[1]).z_c('green');
-Z_('p').z_c('purple');
+Z_('body').z_bgc('gray');//1st occurence - and only one body tag anyways
 
 ###default repeat background image
-Z_('five').z_bgi('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
+Z_('#five').z_bgi('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
 
 ###no repeat background image
-Z_('five').z_bgino('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
+Z_('#five').z_bgino('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
 
 ###repeat-x background image
-Z_('six6').z_bgix('website/picture.gif').z_c('black').z_b('solid red 4px').z_w('240px').z_h('75px');
+Z_('#six6').z_bgix('website/picture.gif').z_c('black').z_b('solid red 4px').z_w('240px').z_h('75px');
 
 ###repeat-y background image
-Z_('sevn').z_bgiy('website/picture.gif').z_c('black').z_b('solid green 4px').z_w('80px').z_h('240px');
+Z_('#sevn').z_bgiy('website/picture.gif').z_c('black').z_b('solid green 4px').z_w('80px').z_h('240px');
 
 ####chain horizontally, or vertically
 
