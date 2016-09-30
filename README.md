@@ -1,5 +1,5 @@
 # stylZ
-Related to my IDxyz library/code - a shortener for code targeting an element id to add css, color, etc..
+Started practicing method chaining and started work on my IDxyz library/code - a shortener for code targeting an element id to add css, color, etc.. - Abandoned that for current build using 'stylZ' or 'Z_' to apply selectors to css stuff
 
 Still working on this fun project - (Bugs:more than one tag doesn't work, and querySelector('*') doesn't work yet either)
 
