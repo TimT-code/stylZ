@@ -1,27 +1,60 @@
-var stylZ=(function(){// 'Z_' is an alias for 'styleZ' 
-    var stylZ=function(el,index){
+var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
+    console.clear();//testing console
+  
+    var stylZ=function(el,index){      
       var ele;
-      if(!arguments[1]){//no index passed or asterisk
-        if(el.charAt(0)==='#'){console.log('id');//id
-          ele=document.getElementById(el.substring(1));// remove '#' 
-        }else if(el.charAt(0)==='.'){console.log('class');//class
-          ele=document.querySelector(el);//1st Class occurence - don't use substring to remove '.' since querySelector needs it
-        }else if(arguments[0] && el.charAt(0)!=='#' && el.charAt(0)!=='.'){console.log('tagname only-first occurence');
-          ele=document.getElementsByTagName(el)[0];
-        }
-      }
-      else{if(arguments[0] && arguments[1] && arguments[1]!=='*' && el.charAt(0)!=='#' && el.charAt(0)!=='.'){console.log('tagname and index');//tagname and index
-          ele=document.getElementsByTagName(el)[index];//index
-        }else if(arguments[0] && arguments[1] && arguments[1]!=='*'){console.log('id, class, or tagname');
-          ele=document.querySelectorAll(el)[index];
-        }else if(!arguments[0] && arguments[1]==='*'){console.log('ALL elements on page');
-          ele=document.querySelectorAll('*');//make loop
-        }
+        if( arguments[0] &&
+           !arguments[1]){
+                          //No 2nd argument passed/no index passed or asterisk
+                          if(arguments[0] &&
+                             el.charAt(0)==='#'){
+                                                 console.log('id');//id
+                                                 ele=document.getElementById(el.substring(1));// remove 1st character '#'
+          }else if(arguments[0] &&
+                   el.charAt(0)==='.'){
+                                       console.log('class - 1st occurence');//class
+                                       ele=document.querySelector(el);//1st Class occurence - don't use substring to remove '.' since querySelector needs it
+          }else if(arguments[0] &&
+                   el.charAt(0)!=='#' &&
+                   el.charAt(0)!=='.' &&
+                   el.charAt(0)!=='*'){
+                                       console.log('tagname only-first occurence');
+                                       ele=document.getElementsByTagName(el)[0];
           }
+        }
+        else{if(arguments[0] &&
+                arguments[0]!=='*' &&
+                arguments[1] &&
+                arguments[1]!=='*' &&
+                el.charAt(0)!=='#' &&
+                el.charAt(0)!=='.'){
+                                    console.log('tagname and index');//tagname and index
+                                    ele=document.getElementsByTagName(el)[index];//index
+          }else if(arguments[0] &&
+                   arguments[0]!=='*' &&
+                   arguments[1] &&
+                   arguments[1]==='*'){
+                                       console.log('id, class, or tagname - first occurence');
+                                       ele=document.querySelectorAll(el)[0];
+          }else if(arguments[0] &&
+                   arguments[0]==='*' &&
+                   arguments[1] &&
+                   arguments[1]==='*'){
+                                       console.log('ALL elements on page-- all by getElementsByTagName(\'*\') - need loop here');
+                                       //document.getElementsByTagName('*')[i];//make loop code
+          }else if(arguments[0] &&
+                   arguments[0]==='*' &&
+                   arguments[1] &&
+                   arguments[1]==='**'){
+                                        console.log('ALL elements on page-- all by querySelectorAll(\'*\') - need loop here');
+                                        //document.querySelectorAll('*')[i];//make loop code                                        
+          }
+            }
       
-        var elz=ele.style;
+      var 
+        elz=ele.style,//get ele from if/else statement-tried to make it a function already-couldn't figure out how to extract/return ele outside of function.
 
-        var zss=function(prop,val){/*zss=css*/elz[prop]=val;return this;},
+        zss=function(prop,val){/*zss=css*/elz[prop]=val;return this;},
           
         z_dno=function(){elz.display='none';return this;},
         z_din=function(){elz.display='inline';return this;},
@@ -37,7 +70,8 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
         z_fvin=function(){elz.fontVariant='initial';return this;},
         z_fvih=function(){elz.fontVariant='inherit';return this;},
 
-        z_c=function(val){elz.color=val;return this;},        
+        z_c=function(val){elz.color=val;return this;},
+        z_o=function(val){elz.opacity=val;elz.filter='alpha(opacity='+val*100+')';return this;},
         
         z_bg=function(val){elz.background=val;return this;},
         z_bgc=function(val){elz.backgroundColor=val;return this;},
@@ -162,6 +196,7 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
         
         /*text color*/
         z_c:z_c,
+        z_o:z_o,
         
         /*background*/
         z_bg:z_bg,        
@@ -250,4 +285,4 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
     };
 var ZZ_=window.stylZ=window.Z_=stylZ;/*stylZ=Z_*/
 return ZZ_;
-}());
+})();
