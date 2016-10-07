@@ -35,13 +35,6 @@ Z_('#sevn').z_olwtk().z_olc('orange').z_ols('double');
 Z_('#sevn').z_m('15px 0 0 25px');
 Z_('#one').z_iH('1');
 
-### insertAdjacentElement('beforeend','hr')
-Z_('body').z_iAEbe('hr');
-### insertAdjacentHTML
-Z_('body').z_iAHbe('<hr style="background-color:red;width:20px;height:5px">')
-/*Z_('*','*').z_b('solid black 4px');//document.getElementsByTagName('*')-need loop*/
-/*Z_('*','**').z_b('solid yellow 6px');//document.querySelectorAll('*')[i]-need loop*/
-
 ###default repeat background image
 Z_('#five').z_bgi('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
 
