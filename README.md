@@ -24,6 +24,23 @@ Z_('.sev').zss('color','orange');
 Z_('p','0').z_c('red');
 Z_('p',[1]).z_c('green');
 Z_('body').z_bgc('gray');//1st occurence - and only one body tag anyways
+Z_('#five').z_fvs();
+Z_('#six6').z_bgc('green').z_bmlum();
+Z_('#sevn').z_bgc('red').z_bmd();
+Z_('hr').z_bgc('turquoise').z_b('solid black 2px').z_h('5px').z_w('300px');
+Z_('.sev').zss('color','orange');
+Z_('body').z_b('solid blue 6px');
+Z_('#sevn').z_o('0.6');//document.getElementById('#sevn')
+Z_('#sevn').z_olwtk().z_olc('orange').z_ols('double');
+Z_('#sevn').z_m('15px 0 0 25px');
+Z_('#one').z_iH('1');
+
+### insertAdjacentElement('beforeend','hr')
+Z_('body').z_iAEbe('hr');
+### insertAdjacentHTML('beforeend','<hr style="background-color:red;width:20px;height:5px">')
+Z_('body').z_iAHbe('<hr style="background-color:red;width:20px;height:5px">')
+/*Z_('*','*').z_b('solid black 4px');//document.getElementsByTagName('*')-need loop*/
+/*Z_('*','**').z_b('solid yellow 6px');//document.querySelectorAll('*')[i]-need loop*/
 
 ###default repeat background image
 Z_('#five').z_bgi('website/picture.gif').z_c('black').z_b('solid black 4px').z_w('80px').z_h('75px');
