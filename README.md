@@ -37,7 +37,7 @@ Z_('#one').z_iH('1');
 
 ### insertAdjacentElement('beforeend','hr')
 Z_('body').z_iAEbe('hr');
-### insertAdjacentHTML('beforeend','<hr style="background-color:red;width:20px;height:5px">')
+### insertAdjacentHTML
 Z_('body').z_iAHbe('<hr style="background-color:red;width:20px;height:5px">')
 /*Z_('*','*').z_b('solid black 4px');//document.getElementsByTagName('*')-need loop*/
 /*Z_('*','**').z_b('solid yellow 6px');//document.querySelectorAll('*')[i]-need loop*/
