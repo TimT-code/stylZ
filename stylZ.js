@@ -1,7 +1,7 @@
-var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
+var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
     console.clear();//testing console
   
-    var stylZ=function(el,index){      
+    var stylZ=function(el,index){
       var ele;
         if( arguments[0] &&
            !arguments[1]){
@@ -123,7 +123,24 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
         z_oric=function(){elz.backgroundOrigin='content-box';return this;},
         z_orin=function(){elz.backgroundOrigin='initial';return this;},
         z_orih=function(){elz.backgroundOrigin='inherit';return this;},
-      
+          
+        z_ol=function(val){elz.outline=val;return this;},
+        z_olini=function(){elz.outline='initial';return this;},
+        z_olinh=function(){elz.outline='inherit';return this;},
+        z_olc=function(val){elz.outlineColor=val;return this;},
+        z_olci=function(){elz.outlineColor='invert';return this;},
+        z_olcini=function(){elz.outlineColor='initial';return this;},
+        z_olcinh=function(){elz.outlineColor='inherit';return this;},
+        z_ols=function(val){elz.outlineStyle=val;return this;},
+        /*maybe abbreviate the outline.style list too*/
+        z_olw=function(val){elz.outlineWidth=val;return this;},
+        z_olwtn=function(){elz.outlineWidth='thin';return this;},
+        z_olwm=function(){elz.outlineWidth='medium';return this;},
+        z_olwtk=function(){elz.outlineWidth='thick';return this;},
+        z_olwl=function(len){elz.outlineWidth=len;return this;},
+        z_olwini=function(){elz.outlineWidth='initial';return this;},
+        z_olwinh=function(){elz.outlineWidth='inherit';return this;},        
+          
         z_b=function(val){elz.border=val;return this;},          
         z_bt=function(val){elz.borderTop=val;return this;},          
         z_br=function(val){elz.borderRight=val;return this;},          
@@ -173,7 +190,23 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
       
         z_h=function(val){elz.height=val;return this;},/*auto|length|%|initial|inherit*/
       
-        z_zi=function(val){elz.zIndex=val;return this;};/*auto|number|initial|inherit - number can be positive, or negative*/
+        z_zi=function(val){elz.zIndex=val;return this;},/*auto|number|initial|inherit - number can be positive, or negative*/
+      
+        z_iH=function(val){ele.innerHTML=val;return this;},
+        z_oH=function(val){ele.outerHTML=val;return this;},
+        z_tC=function(val){var valz=ele.textContent||ele.innerText;valz=val;return this;},/*make sure this line is correct*/
+        z_iT=function(val){ele.innerText=val;return this;},/*<IE9*/
+        z_oT=function(val){ele.outerText=val;return this;},
+        z_iAE=function(pos,element){var elmnt=document.createElement(element);ele.insertAdjacentElement(pos,elmnt);return this;},
+        z_iAEbb=function(element){var elmnt=document.createElement(element);ele.insertAdjacentElement('beforebegin',elmnt);return this;},
+        z_iAEab=function(element){var elmnt=document.createElement(element);ele.insertAdjacentElement('afterbegin',elmnt);return this;},
+        z_iAEbe=function(element){var elmnt=document.createElement(element);ele.insertAdjacentElement('beforeend',elmnt);return this;},
+        z_iAEae=function(element){var elmnt=document.createElement(element);ele.insertAdjacentElement('afterend',elmnt);return this;},          
+        z_iAH=function(pos,element){ele.insertAdjacentHTML(pos,element);return this;},
+        z_iAHbb=function(element){ele.insertAdjacentHTML('beforebegin',element);return this;},
+        z_iAHab=function(element){ele.insertAdjacentHTML('afterbegin',element);return this;},
+        z_iAHbe=function(element){ele.insertAdjacentHTML('beforeend',element);return this;},
+        z_iAHae=function(element){ele.insertAdjacentHTML('afterend',element);return this;};
           
 
       return {/*To-do list--Return one function ONLY... that is equivalent to this whole object being returned*/
@@ -233,7 +266,22 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
         z_orin:z_orin,
         z_orih:z_orih,
         
-        /*border*/
+        /*outline & border*/
+        z_ol:z_ol,
+        z_olini:z_olini,
+        z_olinh:z_olinh,
+        z_olc:z_olc,
+        z_olci:z_olci,
+        z_olcini:z_olcini,
+        z_olcinh:z_olcinh,
+        z_ols:z_ols,
+        z_olw:z_olw,
+        z_olwtn:z_olwtn,
+        z_olwm:z_olwm,
+        z_olwtk:z_olwtk,
+        z_olwl:z_olwl,
+        z_olwini:z_olwini,
+        z_olwinh:z_olwinh,
         z_b:z_b,
         z_bt:z_bt,
         z_br:z_br,
@@ -280,9 +328,25 @@ var stylZ=(function(){// 'Z_' is an alias for 'styleZ'
         z_h:z_h,
         
         /*zIndex*/
-        z_zi:z_zi
+        z_zi:z_zi,
+        
+        /*innerHTML, textContent, innerText ,insertAdjacentElement, insertAdjacentHTML*/
+        z_iH:z_iH,
+        z_oH,z_oH,
+        z_tC:z_tC,
+        z_iT:z_iT,
+        z_oT:z_oT,
+        z_iAE:z_iAE,
+        z_iAEbb:z_iAEbb,
+        z_iAEab:z_iAEab,
+        z_iAEae:z_iAEae,
+        z_iAEbe:z_iAEbe,
+        z_iAH:z_iAH,
+        z_iAHbb:z_iAHbb,
+        z_iAHae:z_iAHae,
+        z_iAHbe:z_iAHbe
       };
     };
 var ZZ_=window.stylZ=window.Z_=stylZ;/*stylZ=Z_*/
 return ZZ_;
-})();
+})(window);
