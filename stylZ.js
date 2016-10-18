@@ -51,15 +51,16 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
           }
             }
       
-      var 
-        elz=ele.style,//get ele from if/else statement-tried to make it a function already-couldn't figure out how to extract/return ele outside of function.
-
-        zss=function(prop,val){/*zss=css*/elz[prop]=val;return this;},
-          
-        z_dno=function(){elz.display='none';return this;},
-        z_din=function(){elz.display='inline';return this;},
-        z_dib=function(){elz.display='inline-block';return this;},
-        z_dbl=function(){elz.display='block';return this;},
+    elz=ele.style;/*get ele from if/else statement-tried to make it a function already-couldn't figure out how to extract/return ele outside of function.*/
+        var f=Function,/*https://github.com/jed/140bytes/wiki/Byte-saving-techniques*/
+        
+        //zss=function(prop,val){elz[prop]=val;return this;},
+        zss=f('elz','prop','val','elz[prop]=val;return this'),/*zss=css*/
+        //z_dno=function(){elz.display='none';return this;},  
+        z_dno=f('elz.display="none";return this'),
+        z_din=f('elz.display="inline";return this'),
+        z_dib=f('elz.display="inline-block";return this'),
+        z_dbl=f('elz.display="block";return this'),
           
         z_btm=function(val){elz.bottom=val;return this;},
           
@@ -75,7 +76,8 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
         
         z_bg=function(val){elz.background=val;return this;},
         z_bgc=function(val){elz.backgroundColor=val;return this;},
-        z_bgi=function(val){if(arguments[0])elz.backgroundImage='url("'+val+'")';/*default x-y repeat*/return this;},
+        z_bgi=function(val){elz.backgroundImage='url("'+val+'")';/*default x-y repeat*/return this;},
+        z_bgir=function(){if(arguments[0])elz.backgroundImage='url("'+val+'")';elz.backgroundRepeat='repeat';return this;},
           
         z_bgix=function(val){
           if(arguments[0])elz.backgroundImage='url("'+val+'")';
@@ -95,9 +97,36 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
           return this;
         },
           
-        z_bgino=function(val){elz.backgroundImage='none';return this;},
-        z_bgini=function(val){elz.backgroundImage='initial';return this;},
-        z_bginh=function(val){elz.backgroundImage='inherit';return this;},
+        z_bgino=function(){elz.backgroundImage='none';return this;},
+        z_bgini=function(){elz.backgroundImage='initial';return this;},
+        z_bginh=function(){elz.backgroundImage='inherit';return this;},
+          
+        z_bgr=function(val){elz.backgroundRepeat=val;return this;},
+        z_bgrr=function(){elz.backgroundRepeat='repeat';return this;},
+        z_bgrx=function(){elz.backgroundRepeat='repeat-x';return this;},
+        z_bgry=function(){elz.backgroundRepeat='repeat-y';return this;},
+        z_bgrn=function(){elz.backgroundRepeat='no-repeat';return this;},
+        z_bgri=function(){elz.backgroundRepeat='initial';return this;},
+          
+        z_bgp=function(val){elz.backgroundPosition=val;return this;},
+        z_bgplt=function(){elz.backgroundPosition='left top';return this;},
+        z_bgplc=function(){elz.backgroundPosition='left center';return this;},
+        z_bgplb=function(){elz.backgroundPosition='left bottom';return this;},
+        z_bgprt=function(){elz.backgroundPosition='right top';return this;},
+        z_bgprc=function(){elz.backgroundPosition='right center';return this;},
+        z_bgprb=function(){elz.backgroundPosition='right bottom';return this;},
+        z_bgpct=function(){elz.backgroundPosition='center top';return this;},
+        z_bgpcc=function(){elz.backgroundPosition='center center';return this;},
+        z_bgpcb=function(){elz.backgroundPosition='center bottom';return this;},
+        z_bgpini=function(){elz.backgroundPosition='initial';return this;},
+        z_bgpinh=function(){elz.backgroundPosition='inherit';return this;},
+          
+        z_bga=function(val){elz.backgroundAttachment=val;return this;},
+        z_bgas=function(){elz.backgroundAttachment='scroll';return this;},
+        z_bgaf=function(){elz.backgroundAttachment='fixed';return this;},
+        z_bgal=function(){elz.backgroundAttachment='local';return this;},
+        z_bgaini=function(){elz.backgroundAttachment='initial';return this;},
+        z_bgainh=function(){elz.backgroundAttachment='inherit';return this;},
           
         z_bm=function(val){elz.backgroundBlendMode=val;return this;},/*(CSS3 - noIE) - normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity*/
         z_bmn=function(){elz.backgroundBlendMode='normal';return this;},
@@ -206,7 +235,7 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
         z_iAHbb=function(element){ele.insertAdjacentHTML('beforebegin',element);return this;},
         z_iAHab=function(element){ele.insertAdjacentHTML('afterbegin',element);return this;},
         z_iAHbe=function(element){ele.insertAdjacentHTML('beforeend',element);return this;},
-        z_iAHae=function(element){ele.insertAdjacentHTML('afterend',element);return this;};
+        z_iAHae=function(element){ele.insertAdjacentHTML('afterend',element);return this;};        
           
 
       return {/*To-do list--Return one function ONLY... that is equivalent to this whole object being returned*/
@@ -235,12 +264,39 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
         z_bg:z_bg,        
         z_bgc:z_bgc,
         z_bgi:z_bgi,
+        z_bgir:z_bgir,
         z_bgix:z_bgix,
         z_bgiy:z_bgiy,
         z_bgin:z_bgin,
         z_bgino:z_bgino,
         z_bgini:z_bgini,
         z_bginh:z_bginh,
+        z_bgr:z_bgr,
+        z_bgrr:z_bgrr,
+        z_bgrx:z_bgrx,
+        z_bgry:z_bgry,
+        z_bgrn:z_bgrn,
+        z_bgri:z_bgri,
+        
+        z_bgp:z_bgp,
+        z_bgplt:z_bgplt,
+        z_bgplc:z_bgplc,
+        z_bgplb:z_bgplb,
+        z_bgprt:z_bgprt,
+        z_bgprc:z_bgprc,
+        z_bgprb:z_bgprb,
+        z_bgpct:z_bgpct,
+        z_bgpcc:z_bgpcc,
+        z_bgpcb:z_bgpcb,
+        z_bgpini:z_bgpini,
+        z_bgpinh:z_bgpinh,
+        
+        z_bga:z_bga,
+        z_bgas:z_bgas,
+        z_bgaf:z_bgaf,
+        z_bgal:z_bgal,
+        z_bgaini:z_bgaini,
+        z_bgainh:z_bgainh,
         z_bm:z_bm,
         z_bmn:z_bmn,
         z_bmm:z_bmm,
@@ -332,7 +388,7 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
         
         /*innerHTML, textContent, innerText ,insertAdjacentElement, insertAdjacentHTML*/
         z_iH:z_iH,
-        z_oH,z_oH,
+        z_oH:z_oH,
         z_tC:z_tC,
         z_iT:z_iT,
         z_oT:z_oT,
