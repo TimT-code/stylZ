@@ -61,6 +61,14 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
         z_din=f('elz.display="inline";return this'),
         z_dib=f('elz.display="inline-block";return this'),
         z_dbl=f('elz.display="block";return this'),
+            
+        z_clr=f('val','elz.clear=val;return this'),
+        z_clrn=f('elz.clear="none";return this'),
+        z_clrl=f('elz.clear="left";return this'),
+        z_clrr=f('elz.clear="right";return this'),
+        z_clrb=f('elz.clear="both";return this'),
+        z_clrini=f('elz.clear="initial";return this'),
+        z_clrinh=f('elz.clear="inherit";return this'),
           
         z_btm=f('val','elz.bottom=val;return this'),
           
@@ -234,6 +242,14 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
         z_din:z_din,
         z_dib:z_dib,
         z_dbl:z_dbl,
+          
+        z_clr:z_clr,
+        z_clrn:z_clrn,
+        z_clrl:z_clrl,
+        z_clrr:z_clrr,
+        z_clrb:z_clrb,
+        z_clrini:z_clrini,
+        z_clrinh:z_clrinh,
         
         z_btm:z_btm,
         
