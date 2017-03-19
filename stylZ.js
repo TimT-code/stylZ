@@ -135,12 +135,12 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
         z_bmsat=f('elz.backgroundBlendMode="saturation";return this'),
         z_bmlum=f('elz.backgroundBlendMode="luminosity";return this'),
         
-        z_clp=f('val','elz.backgroundClip=val;return this'),/*(CSS3 - IE9+) - border-box|padding-box|content-box|initial|inherit*/
-        z_clpb=f('elz.backgroundClip="border-box";return this'),
-        z_clpp=f('elz.backgroundClip="padding-box";return this'),
-        z_clpc=f('val','elz.backgroundClip="content-box";return this'),
-        z_clpi=f('val','elz.backgroundClip="initial";return this'),
-        z_clpih=f('val','elz.backgroundClip="inherit";return this'),
+        z_bclp=f('val','elz.backgroundClip=val;return this'),/*(CSS3 - IE9+) - border-box|padding-box|content-box|initial|inherit*/
+        z_bclpb=f('elz.backgroundClip="border-box";return this'),
+        z_bclpp=f('elz.backgroundClip="padding-box";return this'),
+        z_bclpc=f('val','elz.backgroundClip="content-box";return this'),
+        z_bclpi=f('val','elz.backgroundClip="initial";return this'),
+        z_bclpih=f('val','elz.backgroundClip="inherit";return this'),
           
         z_ori=f('val','elz.backgroundOrigin=val;return this'),/*(CSS3 - IE9+) - padding-box|border-box|content-box|initial|inherit*/
         z_orip=f('elz.backgroundOrigin="padding-box";return this'),
@@ -313,12 +313,12 @@ var stylZ=(function(window,undefined){// 'Z_' is an alias for 'styleZ'
         z_bmsat:z_bmsat,
         z_bmlum:z_bmlum,
         
-        z_clp:z_clp,
-        z_clpb:z_clpb,
-        z_clpp:z_clpp,
-        z_clpc:z_clpc,
-        z_clpi:z_clpi,
-        z_clpih:z_clpih,
+        z_bclp:z_bclp,
+        z_bclpb:z_bclpb,
+        z_bclpp:z_bclpp,
+        z_bclpc:z_bclpc,
+        z_bclpi:z_bclpi,
+        z_bclpih:z_bclpih,
         
         z_ori:z_ori,
         z_orip:z_orip,
